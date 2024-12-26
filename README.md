@@ -5,3 +5,4 @@ This tool is under development, I am trying to build it in public and write abou
 ## Story
 
 - [1. Goal and analysis](story/1.goal-and-analysis.md)
+- [2. Designing the CLI interface](story/2.cli-interface.md)
