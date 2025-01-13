@@ -1,4 +1,5 @@
 import { program } from 'commander'
+import { init } from './init'
 
 program.name('rag').version('0.0.1').description('Simple RAG system for developers')
 
@@ -45,7 +46,9 @@ program
     console.log(`Getting relevant parts from documentations for prompt "${prompt}" with options ${JSON.stringify(options)}`)
   })
 
-program.parseAsync().catch((err) => {
-  console.error(err)
-  process.exit(1)
-})
+init()
+  .then(() => program.parseAsync())
+  .catch((err) => {
+    console.error(err)
+    process.exit(1)
+  })
